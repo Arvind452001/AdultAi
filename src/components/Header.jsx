@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/img/logos/logo.png'
 import logoInner from '../assets/img/logos/logo-inner.png'
 
@@ -32,9 +33,9 @@ const Header = () => {
               <div className="menu_area alt-font">
                 <nav className="navbar navbar-expand-lg navbar-light p-0">
                   <div className="navbar-header navbar-header-custom">
-                    <a href="/" className="navbar-brand">
+                    <Link to="/" className="navbar-brand">
                       <img id="logo" src={logoSrc} alt="logo" style={{ maxWidth: '150px' }} />
-                    </a>
+                    </Link>
                   </div>
 
                   <button 
@@ -50,18 +51,18 @@ const Header = () => {
                     id="nav"
                     style={{ display: mobileMenuOpen ? 'flex' : 'none' }}
                   >
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#blogs">Blogs</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About us</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
+                    <li><Link to="/dashboard">Dashboard</Link></li>
                   </ul>
 
                   <div className="attr-nav align-items-xl-center ms-xl-auto main-font">
                     <ul>
                       <li className="d-xl-inline-block">
-                        <a href="#login" className="btn-style1 white-hover medium rounded-3">
+                        <Link to="/login" className="btn-style1 white-hover medium rounded-3">
                           <span><i className="fa fa-user"></i> Login</span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
